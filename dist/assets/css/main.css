@@ -720,6 +720,12 @@ button {
     display: block;
 }
 
+@media screen and (max-width: 768px) {
+    .card__video-wrapper {
+        display: none;
+    }
+}
+
 .card__video {
     position: absolute;
     left: 0;

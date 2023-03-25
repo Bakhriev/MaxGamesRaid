@@ -20,6 +20,8 @@ function burgerMenu() {
 			burger.classList.remove("active")
 			headerCategories.classList.remove("active")
 			overlay.classList.remove("active")
+
+			//
 		}
 	})
 }
