@@ -24,3 +24,15 @@ function burgerMenu() {
 	})
 }
 burgerMenu()
+
+const cardItems = document.querySelectorAll(".card__left")
+
+cardItems.forEach(cardItem => {
+	const video = cardItem.querySelector(".card__video")
+	video.addEventListener("mouseenter", () => {
+		video.play()
+	})
+	video.addEventListener("mouseleave", () => {
+		video.pause()
+	})
+})

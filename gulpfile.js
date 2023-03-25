@@ -27,6 +27,7 @@ const path = {
 		css: distPath + "assets/css/",
 		js: distPath + "assets/js/",
 		images: distPath + "assets/img/",
+		videos: distPath,
 		fonts: distPath + "assets/fonts/"
 	},
 	src: {
@@ -36,6 +37,7 @@ const path = {
 		images:
 			srcPath +
 			"assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+		videos: srcPath + "assets/videos/*.mp4",
 		fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
 	},
 	watch: {
@@ -45,6 +47,7 @@ const path = {
 		images:
 			srcPath +
 			"assets/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+		videos: srcPath + "assets/videos/*.mp4",
 		fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
 	},
 	clean: "./" + distPath
@@ -63,6 +66,10 @@ function html() {
 		.pipe(plumber())
 		.pipe(dest(path.build.html))
 		.pipe(browserSync.reload({ stream: true }))
+}
+
+function videos() {
+	return src(path.src.videos, { base: srcPath }).pipe(dest(path.build.videos))
 }
 
 function css() {
@@ -163,16 +170,21 @@ function watchFiles() {
 	gulp.watch([path.watch.css], css)
 	gulp.watch([path.watch.js], js)
 	gulp.watch([path.watch.images], images)
+	gulp.watch([path.watch.videos], videos)
 	gulp.watch([path.watch.fonts], fonts)
 }
 
-const build = series(clean, parallel(html, css, js, images, webpImages, fonts))
+const build = series(
+	clean,
+	parallel(html, css, js, images, videos, webpImages, fonts)
+)
 const watch = parallel(build, watchFiles, serve)
 
 exports.html = html
 exports.css = css
 exports.js = js
 exports.images = images
+exports.videos = videos
 exports.webpImages = webpImages
 exports.fonts = fonts
 exports.clean = clean
