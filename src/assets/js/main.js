@@ -16,7 +16,7 @@ function burgerMenu() {
 	})
 
 	window.addEventListener("resize", () => {
-		if (window.innerWidth > 991.98) {
+		if (window.innerWidth > 768.98) {
 			burger.classList.remove("active")
 			headerCategories.classList.remove("active")
 			overlay.classList.remove("active")

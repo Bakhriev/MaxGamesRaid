@@ -1,0 +1,202 @@
+.hero {
+	position: relative;
+	background-color: $sharkBg;
+	min-height: 490px;
+
+	@media screen and (max-width: 992px) {
+		background: url(../img/content/hero-mobile.webp) no-repeat center/cover;
+	}
+
+	// .hero__body
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 10px;
+		@media screen and (max-width: 1023px) {
+			gap: 0;
+			justify-content: center;
+		}
+	}
+
+	&__left {
+		@media screen and (max-width: 992px) {
+			position: absolute;
+			bottom: 0;
+			background: rgba(115, 42, 3, 0.2);
+			border-radius: 10px 10px 0;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+			margin-right: 10px;
+		}
+	}
+	&__text-wrapper {
+		position: relative;
+		z-index: 2;
+		max-width: 450px;
+		padding: 111px 10px 70px;
+		@media screen and (max-width: 1023px) {
+			padding-top: 50px;
+			max-width: 550px;
+		}
+		@media screen and (max-width: 992px) {
+			padding-bottom: 0;
+		}
+	}
+
+	&__right {
+		position: relative;
+		flex-shrink: 0;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+	}
+
+	&__bg-wrapper {
+		position: relative;
+		height: 100%;
+
+		@media screen and (max-width: 992px) {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			z-index: 1;
+
+			width: 35%;
+			height: 100%;
+
+			background: rgba(25, 27, 31, 0.3);
+			backdrop-filter: blur(75px);
+			transform: skewX(7.5deg);
+		}
+		&::before {
+			left: -202px;
+		}
+		&::after {
+			right: -208px;
+		}
+	}
+
+	&__bg {
+		position: relative;
+		transform: skewX(3.5deg);
+		height: 100%;
+
+		@media screen and (max-width: 992px) {
+			&::before,
+			&::after {
+				display: none;
+			}
+			transform: skewX(0);
+		}
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			background-color: #ba6063;
+			backdrop-filter: blur(30px) saturate(102%);
+			transform: skewX(4deg);
+			z-index: 2;
+			height: 100%;
+			width: 3%;
+		}
+		&::before {
+			left: 23px;
+		}
+		&::after {
+			right: 17px;
+		}
+	}
+
+	&__rating {
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
+		p {
+			font-weight: 400;
+			font-size: 18px;
+			color: #eebf51;
+		}
+	}
+
+	// .hero__title
+
+	&__title {
+		margin-bottom: 20px;
+
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 1.2;
+		color: $white;
+
+		@media screen and (max-width: 992px) {
+			font-size: 30px;
+		}
+		@media screen and (max-width: 480px) {
+			font-size: 25px;
+		}
+	}
+
+	// .hero__champion-icon
+	&__champion-icon {
+		width: 25px;
+		height: 21px;
+	}
+
+	// .hero__text
+
+	&__text {
+		margin-bottom: 28px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 1.2;
+		color: $white;
+		@media screen and (max-width: 480px) {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 992px) {
+			font-size: 16px;
+		}
+	}
+
+	// .hero__buttons
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		margin-bottom: 20px;
+	}
+	&__btn {
+		@media screen and (max-width: 480px) {
+			background-color: #c1835a;
+			padding: 7px 0;
+			text-align: center;
+			border-radius: 15px;
+			width: 100%;
+			&:not(:last-child) {
+				display: none;
+			}
+		}
+	}
+}
