@@ -404,7 +404,7 @@ button {
 
 @media screen and (max-width: 992px) {
     .hero {
-        background: url(../img/content/hero-mobile.webp) no-repeat center/cover;
+        background: url(../img/content/her.webp) no-repeat center/cover;
     }
 }
 
@@ -451,6 +451,7 @@ button {
 @media screen and (max-width: 992px) {
     .hero__text-wrapper {
         padding-bottom: 0;
+        padding-top: 20px;
     }
 }
 

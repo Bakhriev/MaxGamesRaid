@@ -4,7 +4,7 @@
 	min-height: 490px;
 
 	@media screen and (max-width: 992px) {
-		background: url(../img/content/hero-mobile.webp) no-repeat center/cover;
+		background: url(../img/content/her.webp) no-repeat center/cover;
 	}
 
 	// .hero__body
@@ -42,6 +42,7 @@
 		}
 		@media screen and (max-width: 992px) {
 			padding-bottom: 0;
+			padding-top: 20px;
 		}
 	}
 
