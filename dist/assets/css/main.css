@@ -625,9 +625,15 @@ button {
     }
 }
 
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
 .actual {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 .actual__title {
@@ -638,6 +644,18 @@ button {
     line-height: 1.2;
     text-transform: capitalize;
     color: #2f2f33;
+}
+
+@media screen and (max-width: 768px) {
+    .actual__title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .actual__title {
+        font-size: 26px;
+    }
 }
 
 .card {
@@ -652,10 +670,24 @@ button {
     border-radius: 8px;
 }
 
+.card__mobile-bg {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    .card {
-        background: url(../img/content/robotBg.webp) no-repeat center/cover;
+    .card__mobile-bg {
+        display: block;
     }
+}
+
+.card__mobile-bg img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1150px) {
@@ -676,6 +708,10 @@ button {
     flex-shrink: 0;
     position: relative;
     cursor: pointer;
+}
+
+.card__left.reversed {
+    order: 1;
 }
 
 @media screen and (max-width: 1150px) {
@@ -704,14 +740,16 @@ button {
 
 .card__mobile img {
     display: none;
-    width: 100%;
+    width: 400px;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
     .card__mobile img {
         position: absolute;
-        top: -80px;
         left: 0;
+        top: 0;
         display: block;
     }
 }
@@ -730,13 +768,13 @@ button {
     position: absolute;
     left: 0;
     top: 0;
+    display: none;
     z-index: 5;
     width: 100%;
-    height: 100%;
+    height: 101%;
     -o-object-fit: cover;
     object-fit: cover;
-    display: none;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .card__right {
@@ -835,6 +873,65 @@ button {
     .card__btn:not(:last-child) {
         display: none;
     }
+}
+
+.swiper {
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+}
+
+.swiper__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px !important;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.all {
+    padding-bottom: 73px;
+    text-align: center;
+}
+
+.all__title {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #2f2f33;
+}
+
+.all__descr {
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #3a3a3a;
+}
+
+.all__link {
+    display: inline-block;
+    margin-bottom: 44px;
 }
 
 .main {

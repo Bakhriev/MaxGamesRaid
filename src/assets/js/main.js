@@ -38,3 +38,27 @@ cardItems.forEach(cardItem => {
 		video.pause()
 	})
 })
+
+const swiper = new Swiper(".swiper", {
+	autoplay: {
+		delay: 0
+	},
+	loop: true,
+	speed: 7000,
+	spaceBetween: 20,
+	slidesPerView: "auto",
+	allowTouchMove: false
+})
+
+const swiperRight = new Swiper(".swiper-right", {
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false,
+		reverseDirection: true
+	},
+	loop: true,
+	allowTouchMove: false,
+	speed: 7000,
+	spaceBetween: 20,
+	slidesPerView: "auto"
+})

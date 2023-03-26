@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 		<link rel="stylesheet" href="./assets/css/main.min.css" />
 		<title>MagGames</title>
 	</head>
@@ -32,6 +36,7 @@
 				</div>
 			</header>
 			<main class="main">
+				<!-- SECTION HERO -->
 				<section class="hero">
 					<div class="container">
 						<div class="hero__body">
@@ -98,12 +103,16 @@
 						</div>
 					</div>
 				</section>
+				<!-- SECTION ACTUAL -->
 				<section class="actual" id="actual">
 					<div class="container">
 						<div class="actual__body">
 							<h2 class="actual__title">Most 3 Played Games 2023</h2>
 							<div class="card-wrapper">
 								<div class="card">
+									<div class="card__mobile-bg">
+										<img src="./assets/img/content/robotBg.webp" alt="" />
+									</div>
 									<div class="card__left">
 										<div class="card__img">
 											<img
@@ -114,10 +123,12 @@
 											/>
 										</div>
 										<div class="card__mobile">
-											<img src="./assets/img/content/robot.webp" alt="" />
+											<img src="./assets/img/content/robot1.webp" alt="" />
 										</div>
 										<div class="card__video-wrapper">
 											<video
+												preload="auto"
+												playsinline
 												src="./assets/videos/machArena.mp4"
 												muted
 												class="card__video"
@@ -178,6 +189,251 @@
 										</div>
 									</div>
 								</div>
+								<!-- 
+
+								 -->
+								<div class="card">
+									<div class="card__mobile-bg">
+										<img src="./assets/img/content/forbeBg.jpg" alt="" />
+									</div>
+									<div class="card__left reversed">
+										<div class="card__img">
+											<img
+												width="487px"
+												height="290px"
+												src="./assets/img/content/card2.webp"
+												alt="mech arena"
+											/>
+										</div>
+										<div class="card__mobile">
+											<img src="./assets/img/content/per.png" alt="" />
+										</div>
+										<div class="card__video-wrapper">
+											<video
+												preload="auto"
+												playsinline
+												src="./assets/videos/Forge.mp4"
+												muted
+												class="card__video"
+											></video>
+										</div>
+									</div>
+									<div class="card__right">
+										<h3 class="card__title">forge of empires</h3>
+										<div class="card__rating-wrapper">
+											<div class="rating">
+												<div class="rating__name rating__name--dark">
+													Rating
+												</div>
+												<div class="rating__number rating__number--dark">
+													4.8
+												</div>
+												<div class="rating__stars">
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+												</div>
+											</div>
+											<ul class="card__game-type game-type">
+												<li class="game-type__item">MMO</li>
+												<li class="game-type__item">Strategy</li>
+												<li class="game-type__item">Browser game</li>
+											</ul>
+										</div>
+
+										<p class="card__text">
+											Strategy MMO Game – The brand-new free-to-play strategy
+											browser game Forge of Empires has literally turned the
+											gaming scene on its head. Within the first eight weeks,
+											one million users had already...
+										</p>
+
+										<div class="card__buttons buttons-wrapper">
+											<a href="#" class="btn card__btn">Play Online</a>
+											<a href="#" class="btn-learn btn--blue card__btn"
+												>Learn More ></a
+											>
+										</div>
+									</div>
+								</div>
+								<!-- 
+
+								 -->
+								<div class="card">
+									<div class="card__mobile-bg">
+										<img src="./assets/img/content/enlistedBg.jpg" alt="" />
+									</div>
+									<div class="card__left">
+										<div class="card__img">
+											<img
+												width="487px"
+												height="290px"
+												src="./assets/img/content/card3.webp"
+												alt="mech arena"
+											/>
+										</div>
+										<div class="card__mobile">
+											<img src="./assets/img/content/enlisted.png" alt="" />
+										</div>
+										<div class="card__video-wrapper">
+											<video
+												preload="auto"
+												playsinline
+												src="./assets/videos/Enlisted.mp4"
+												muted
+												class="card__video"
+											></video>
+										</div>
+									</div>
+									<div class="card__right">
+										<h3 class="card__title">Enlisted</h3>
+										<div class="card__rating-wrapper">
+											<div class="rating">
+												<div class="rating__name rating__name--dark">
+													Rating
+												</div>
+												<div class="rating__number rating__number--dark">
+													4.6
+												</div>
+												<div class="rating__stars">
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+													<img
+														src="./assets/img/icons/star.svg"
+														aria-hidden="true"
+													/>
+												</div>
+											</div>
+											<ul class="card__game-type game-type">
+												<li class="game-type__item">MMO</li>
+												<li class="game-type__item">Shooter</li>
+												<li class="game-type__item">29M+ Downloads</li>
+											</ul>
+										</div>
+
+										<p class="card__text">
+											MMO squad based shooter, which is built around some of the
+											most important and famous episodes from World War II
+										</p>
+
+										<div class="card__buttons buttons-wrapper">
+											<a href="#" class="btn card__btn">Play Online</a>
+											<a href="#" class="btn-learn btn--blue card__btn"
+												>Learn More ></a
+											>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- SECTION ALL -->
+				<section class="all">
+					<h3 class="all__title">check out all our games</h3>
+					<p class="all__descr">
+						MMORPGs, Strategy games, Casual puzzlers, Shooters, and more.
+						There's something for everyone!
+					</p>
+					<a href="#" class="all__link btn--blue btn-learn">See All Games</a>
+					<div class="container swiper__container">
+						<div class="swiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all2.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all1.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all3.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all4.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all5.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all6.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all7.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all8.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all9.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="swiper swiper-right">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all10.png" alt="" />
+								</div>
+
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all11.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all12.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all13.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all14.jpg" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all15.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all16.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all17.png" alt="" />
+								</div>
+								<div class="swiper-slide">
+									<img src="./assets/img/content/all18.jpg" alt="" />
+								</div>
 							</div>
 						</div>
 					</div>
@@ -185,6 +441,8 @@
 			</main>
 			<footer class="footer"></footer>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 		<script src="./assets/js/main.min.js"></script>
 	</body>
 </html>
