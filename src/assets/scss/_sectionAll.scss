@@ -36,6 +36,12 @@
 		line-height: 1.2;
 		text-transform: uppercase;
 		color: #2f2f33;
+		@media screen and (max-width: 768px) {
+			font-size: 26px;
+		}
+		@media screen and (max-width: 425px) {
+			font-size: 24px;
+		}
 	}
 	&__descr {
 		padding: 0 10px;
@@ -45,6 +51,9 @@
 		font-size: 18px;
 		text-transform: capitalize;
 		color: #3a3a3a;
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
 	}
 	&__link {
 		display: inline-block;

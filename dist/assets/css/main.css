@@ -920,6 +920,18 @@ button {
     color: #2f2f33;
 }
 
+@media screen and (max-width: 768px) {
+    .all__title {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .all__title {
+        font-size: 24px;
+    }
+}
+
 .all__descr {
     padding: 0 10px;
     max-width: 550px;
@@ -928,6 +940,12 @@ button {
     font-size: 18px;
     text-transform: capitalize;
     color: #3a3a3a;
+}
+
+@media screen and (max-width: 768px) {
+    .all__descr {
+        font-size: 14px;
+    }
 }
 
 .all__link {
