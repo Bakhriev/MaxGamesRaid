@@ -921,6 +921,7 @@ button {
 }
 
 .all__descr {
+    padding: 0 10px;
     max-width: 550px;
     margin: 0 auto;
     margin-bottom: 30px;
