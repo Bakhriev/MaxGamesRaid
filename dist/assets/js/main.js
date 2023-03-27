@@ -1,3 +1,39 @@
+const cardVideos = document.querySelectorAll(".card__video")
+cardVideos.forEach(cardVideo => {
+	cardVideo.addEventListener("mouseenter", () => {
+		cardVideo.play()
+	})
+	cardVideo.addEventListener("mouseleave", () => {
+		cardVideo.pause()
+	})
+})
+
+// Slow motion right
+const swiper = new Swiper(".swiper", {
+	autoplay: {
+		delay: 0
+	},
+	loop: true,
+	speed: 7000,
+	spaceBetween: 20,
+	slidesPerView: "auto",
+	allowTouchMove: false
+})
+
+// Slow motion left
+const swiperRight = new Swiper(".swiper-reverse", {
+	autoplay: {
+		delay: 0,
+		disableOnInteraction: false,
+		reverseDirection: true
+	},
+	loop: true,
+	speed: 7000,
+	spaceBetween: 20,
+	slidesPerView: "auto",
+	allowTouchMove: false
+})
+
 function burgerMenu() {
 	const burger = document.querySelector(".burger")
 	const headerCategories = document.querySelector(".header__categories")
@@ -26,39 +62,3 @@ function burgerMenu() {
 	})
 }
 burgerMenu()
-
-const cardItems = document.querySelectorAll(".card__left")
-
-cardItems.forEach(cardItem => {
-	const video = cardItem.querySelector(".card__video")
-	video.addEventListener("mouseenter", () => {
-		video.play()
-	})
-	video.addEventListener("mouseleave", () => {
-		video.pause()
-	})
-})
-
-const swiper = new Swiper(".swiper", {
-	autoplay: {
-		delay: 0
-	},
-	loop: true,
-	speed: 7000,
-	spaceBetween: 20,
-	slidesPerView: "auto",
-	allowTouchMove: false
-})
-
-const swiperRight = new Swiper(".swiper-right", {
-	autoplay: {
-		delay: 0,
-		disableOnInteraction: false,
-		reverseDirection: true
-	},
-	loop: true,
-	allowTouchMove: false,
-	speed: 7000,
-	spaceBetween: 20,
-	slidesPerView: "auto"
-})

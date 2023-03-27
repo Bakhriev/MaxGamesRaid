@@ -64,6 +64,10 @@ body {
 	color: #1f7cdf;
 }
 
+.logo {
+	min-width: 100px;
+}
+
 // Overlay
 .overlay {
 	&.active {
@@ -86,24 +90,13 @@ body {
 
 .categories {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	gap: 30px;
 
 	&__item {
 		color: $white;
-	}
-	&__item--last {
-		position: relative;
-		&::after {
-			content: "";
-			position: absolute;
-			left: -15px;
-			top: 50%;
-			transform: translateY(-50%);
-			width: 1px;
-			height: 50%;
-			background-color: $white;
-		}
+		white-space: nowrap;
 	}
 }
 

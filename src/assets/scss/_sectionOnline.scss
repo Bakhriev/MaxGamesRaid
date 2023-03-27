@@ -1,0 +1,181 @@
+.online {
+	padding-bottom: 94px;
+
+	&__top {
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		margin-bottom: 12px;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 1.2;
+		text-align: center;
+		text-transform: uppercase;
+		color: #2f2f33;
+		@media screen and (max-width: 768px) {
+			font-size: 24px;
+		}
+	}
+
+	&__descr {
+		max-width: 555px;
+		margin: 0 auto;
+		font-weight: 400;
+		font-size: 18px;
+		text-align: center;
+		color: #3a3a3a;
+		@media screen and (max-width: 768px) {
+			font-size: 16px;
+		}
+	}
+}
+
+.tab {
+	// .tab__buttons
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 40px;
+		@media screen and (max-width: 768px) {
+			max-width: 578px;
+			margin-left: auto;
+			margin-right: auto;
+			flex-wrap: wrap;
+		}
+	}
+
+	// .tab__btn
+
+	&__btn {
+		background: #e3e3e3;
+		border-radius: 4px;
+		padding: 5px 15px;
+
+		&.active {
+			background: #f7f5f5;
+			border: 1px solid #e3e3e3;
+			padding: 4px 15px;
+		}
+
+		display: inline-block;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: capitalize;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+	// .tab__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__row {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+
+.gameCard {
+	position: relative;
+	max-width: 600px;
+	padding: 17px 20px 27px;
+	background: #ffffff;
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	// .gameCard__top
+
+	&__top {
+		margin-bottom: 18px;
+	}
+
+	// .gameCard__title
+
+	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		text-transform: capitalize;
+		color: #2d2d30;
+		@media screen and (max-width: 768px) {
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+
+	// .gameCard__genre
+
+	&__genre {
+		font-weight: 400;
+		font-size: 16px;
+		color: #616161;
+		@media screen and (max-width: 768px) {
+			font-size: 14px;
+		}
+	}
+
+	// .gameCard__img
+
+	&__img {
+		margin-bottom: 20px;
+
+		img {
+			border-radius: 15px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .gameCard__bottom
+
+	&__bottom {
+	}
+
+	// .gameCard__text
+
+	&__text {
+		max-width: 516px;
+		margin-bottom: 25px;
+		font-weight: 400;
+		font-size: 18px;
+		color: #3a3a3a;
+		max-height: 100px;
+		overflow-y: auto;
+		flex-grow: 1;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	// .gameCard__buttons
+
+	&__buttons {
+		margin: auto 0;
+		display: flex;
+		align-items: center;
+		gap: 35px;
+		@media screen and (max-width: 768px) {
+			.btn {
+				display: none;
+			}
+			.btn-learn {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
